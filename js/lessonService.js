@@ -2,6 +2,6 @@ var app = angular.module('directivePractice');
 
 app.service('lessonService', function($http) {
   this.getSchedule = function(){
-    return $http.get('./../schedule.json');
+    return $http.get('schedule.json');
   };
 });

@@ -1,4 +1,16 @@
 
-<li>{{lesson}}</li>
+<li> {{lesson}}
+  <button ng-click="dayAlert({lesson: lesson, day: lessonDay})"></button>
+</li>
 
-<button ng-click="dayAlert({lesson: lesson, day: lessonDay})"></button>
+<!--  since this ng-click is part of the lesson-hider directive (via this template
+      that appears within the <lesson-hider> tags in index.html) the $scope of the
+      lesson-hider directive applies to what is between the "" NOT lessonCtrl's
+      $scope. The lessonDay function contained on the lessonCtrl scope is 'bound'
+      to or passed on to the dayAlert property on lesson-hider's scope via the
+      following attribute in the <lesson-hider> tag in the index.html file:
+      day-alert="lessonDay(lesson, day)"-->
+
+<!-- <input ng-model="lesson"> -->
+
+<!-- <li ng-repeat="lesson in lessons">{{lesson}}</li> -->

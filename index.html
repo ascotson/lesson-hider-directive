@@ -8,18 +8,16 @@
 
   <body ng-controller="lessonCtrl">
 
-    <ul>
+    <ul> <!-- the ng-repeat here refers to the $scope on lessonCtrl. -->
       <lesson-hider ng-repeat="lesson in lessons" lesson="lesson" day-alert="announceDay(lesson, day)"></lesson-hider>
+                                                    <!-- "lesson" here likewise refers to the lessonCtrl $scope  -->
     </ul>
 
-    <div ui-view></div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.1/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.17/angular-ui-router.js"></script>
-    <script src="./js/app.js"> </script>
-    <script src="./js/lessonCtrl.js"> </script>
-    <script src="./js/lessonService.js"> </script>
-    <script src="./js/lessonHiderDirective.js"> </script>
+    <script src="js/app.js"> </script>
+    <script src="js/lessonCtrl.js"> </script>
+    <script src="js/lessonService.js"> </script>
+    <script src="js/lessonHiderDirective.js"> </script>
   </body>
 
 </html>
